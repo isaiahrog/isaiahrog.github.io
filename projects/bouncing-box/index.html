@@ -8,7 +8,7 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: teal;
+			background-color: rgb(128, 160, 87);
 			font-size: 300%;
 			text-align: center;
 			display: block;
@@ -41,7 +41,7 @@
 			var boardWidth = board.width();	// the maximum X-Coordinate of the screen
 
 			// Every 50 milliseconds, call the update Function (see below)
-			setInterval(update, 50);
+			setInterval(update, 50); 
 			
 			// Every time the box is clicked, call the handleBoxClick Function (see below)
 			box.on('click', handleBoxClick);
@@ -61,8 +61,8 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
-			
-
+			var positionX = 0;
+            var points = 0;
 			
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
@@ -70,8 +70,9 @@
 			turn it around! 
 			*/
 			function update() {
-				
-
+				/* Your Function Call Here */
+				moveBoxTo(positionX);
+                positionX = positionX + 10
 			};
 
 			/* 
@@ -80,8 +81,9 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				
-
+				positionX = 0
+				points = points + 1;
+                changeBoxText(points);
 
 			};
 		})();
