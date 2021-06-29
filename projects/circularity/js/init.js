@@ -66,7 +66,7 @@ var init = function (window) {
         // TODO 9 : Iterate over the array
 
 
-    }
+    
 
     /* 
     This Function should check the position of a circle that is passed to the 
@@ -111,7 +111,7 @@ var init = function (window) {
     game.update = update;
 
      app.addUpdateable(window.opspark.game);
-  }
+    }
 };
 
 
