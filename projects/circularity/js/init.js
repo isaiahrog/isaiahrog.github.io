@@ -81,12 +81,12 @@ var init = function (window) {
         }
 
         // TODO 7 : YOUR CODE STARTS HERE //////////////////////
-        if (circles.x < 0) {
+        if (circle.x < 0) {
             circle.x = canvas.width;
         }
 
         if (circle.y < 0) {
-            circle.i = canvas.height;
+            circle.y = canvas.height;
         }
 
         if (circle.y > canvas.height) {
