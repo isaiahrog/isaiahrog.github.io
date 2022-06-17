@@ -14,28 +14,65 @@ The CSS ids you will work with are:
 ///////////////////////////////////////////////////////////////////////
 
 // TODO 2: Implement bubbleSort
-async function bubbleSort(arrray) {
-    for (i = 0; i - length -1) {
-        for(j = length - 1; j = i + 1 ){
+async function bubbleSort(array) {
+
+    for (i = 0; i - length i++) {
+
+        for (j = length - 1; j = i + 1 ) {
+
             if (array[j] < []) {
 
+                [array[j], [array[i]] = [array[i], array[j]]
+                
+                updateCounter(bubbleCounter);
+                await sleep();
             }
         }
     }
 }
 
+
 // TODO 3: Implement quickSort
+
+function quickSort(array, j, i) {
+    if ((i - j) > 0) {
+        index = partition(array, j, i)
+
+        if j < (index - 1){
+            quicksort(array, j, index - 1)
+
+            if index < i{
+                quicksort(array, index, i)
+
+            }
+
+
+        }
+
+
+    }
+}
+
 
 
 // TODOs 4 & 5: Implement partition
 
 
 // TODO 1: Implement swap
-function swap(array, i, j) {
-    
+
+
+function swap(i, j, array) {
+    var temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+
+    drawSwap()
+
 }
 
-drawSwap()
+
+
+
 
 
 ///////////////////////////////////////////////////////////////////////
@@ -45,12 +82,12 @@ drawSwap()
 //////////////////////////// HELPER FUNCTIONS /////////////////////////
 
 // this function makes the program pause by SLEEP_AMOUNT milliseconds whenever it is called
-function sleep(){
+function sleep() {
     return new Promise(resolve => setTimeout(resolve, SLEEP_AMOUNT));
 }
 
 // This function draws the swap on the screen
-function drawSwap(array, i, j){
+function drawSwap(array, i, j) {
     let element1 = array[i];
     let element2 = array[j];
 
@@ -61,6 +98,6 @@ function drawSwap(array, i, j){
 }
 
 // This function updates the specified counter
-function updateCounter(counter){
+function updateCounter(counter) {
     $(counter).text("Move Count: " + (parseFloat($(counter).text().replace(/^\D+/g, '')) + 1));
 }
