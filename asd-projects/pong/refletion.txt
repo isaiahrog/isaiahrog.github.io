@@ -1,0 +1,21 @@
+
+User Story / Gameplay
+Describe the gameplay: Two players go back inforth with on ball, and its in a rectangle. If the ball passes the player, the other player gets that point and so on. 
+Does the game have an end? If so, what are the conditions for when it ends? Yes, the game has an end, and the conditions of the end is that when someon scores the game resets. 
+What ifs will there be? If ball does this then bounds. If player, 
+
+
+Visual Game Components:
+What are the visual game components? For example, in Bouncing Box, the game components were the board and the box. Bouncing, Bouncing off of players, game resets.
+    Which will be static? (the board) I don't know
+    Which will be animated? (the box) Ball, Players.
+What data will you need to manage each game component? For example, in Bouncing Box, the data values were positionX, speedX, and points. : Per-Score someone thats score will win that point.
+
+Events / Logic
+What events will occur in this game? (timer events, keyboard events, clicking events?) All the example are going to be in the events.
+How do those events affect the data of the program? For the real event to make the game work. 
+For each "event", write out the high-level logic of what will happen. It is better (and tricky) to be as specific as you can while remaining high-level! Keyboard, Speed, Player, Ball, "reset", and board.
+
+
+
+
