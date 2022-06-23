@@ -20,9 +20,18 @@ async function bubbleSort (array) {
 
     while (sorted === falso) {
         sorted = true 
-        
-        ITERTAE i = 0 
+
+    for (var j = 0; i; length -2;){
+        if(array[i] > array[i + 1]) {
+            swap array[i] + [i + 1];
+
+            sorted = false 
+        }
+
     }
+        
+        
+    
 
 
 }
