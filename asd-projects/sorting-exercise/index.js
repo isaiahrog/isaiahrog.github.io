@@ -36,46 +36,25 @@ async function bubbleSort (array) {
     }   
         
 }
-
-
-// WHILE the array is NOT sorted:
-// 	sorted = true
-//     ITERATE from i = 0 to i = length-2:
-//             IF array[i] > array[i + 1]:
-//     swap array[i] and array[i + 1]
-//     sorted = false
     
 	
 
 
-    
-
-
-
 // // TODO 3: Implement quickSort
 
-// function quickSort(array, j, i) {
-//     if ((i - j) > 0) {
-//         index = partition(array, j, i)
+async function quickSort (array,left, right){
+    return 
+}
 
-//         if j < (index - 1) {
-//             quicksort(array, j, index - 1)
-
-//             if (index < i) {
-//                 quicksort(array, index, i)
-
-//             }
-
-
-//         }
-
-
-//     }
-// }
 
 
 
 // TODOs 4 & 5: Implement partition
+
+function partition(array, left, right){
+
+}
+
 
 
 // TODO 1: Implement swap
