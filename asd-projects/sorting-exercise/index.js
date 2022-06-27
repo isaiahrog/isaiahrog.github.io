@@ -18,38 +18,33 @@ async function bubbleSort (array) {
    
     var sorted = false
 
-    while (sorted === falso) {
+    while (sorted === false) {
         sorted = true 
+   
+        for (i = 0; i <= array.length - 2; i++) {
+            
+            if (array[i].value > array[i + 1].value){
+                
+                swap(i, i + 1, array); 
+                sorted = false 
 
-    for (var j = 0; i; length -2;){
-        if(array[i] > array[i + 1]) {
-            swap array[i] + [i + 1];
-
-            sorted = false 
+                updateCounter(bubbleCounter);
+                await sleep();
+            } 
         }
 
-    }
+    }   
         
-        
-    
-
-
 }
-// WHILE  (sorted === false) {
-   
-//     sorted = true
-  
-//     ITERATE  i = 0 to i = length-2:
-	
-//     IF (array[i] > array[i + 1]) {
-        
-//         swap array[i] + array[i + 1];
 
+
+// WHILE the array is NOT sorted:
+// 	sorted = true
+//     ITERATE from i = 0 to i = length-2:
+//             IF array[i] > array[i + 1]:
+//     swap array[i] and array[i + 1]
 //     sorted = false
     
-//     }
-
-// }
 	
 
 
@@ -57,26 +52,26 @@ async function bubbleSort (array) {
 
 
 
-// TODO 3: Implement quickSort
+// // TODO 3: Implement quickSort
 
-function quickSort(array, j, i) {
-    if ((i - j) > 0) {
-        index = partition(array, j, i)
+// function quickSort(array, j, i) {
+//     if ((i - j) > 0) {
+//         index = partition(array, j, i)
 
-        if j < (index - 1) {
-            quicksort(array, j, index - 1)
+//         if j < (index - 1) {
+//             quicksort(array, j, index - 1)
 
-            if (index < i) {
-                quicksort(array, index, i)
+//             if (index < i) {
+//                 quicksort(array, index, i)
 
-            }
-
-
-        }
+//             }
 
 
-    }
-}
+//         }
+
+
+//     }
+// }
 
 
 
@@ -91,7 +86,8 @@ function swap(i, j, array) {
     array[i] = array[j];
     array[j] = temp;
 
-    drawSwap()
+
+    drawSwap(array, i , j)
 
 }
 
@@ -113,6 +109,7 @@ function sleep() {
 
 // This function draws the swap on the screen
 function drawSwap(array, i, j) {
+
     let element1 = array[i];
     let element2 = array[j];
 
