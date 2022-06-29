@@ -14,36 +14,42 @@ The CSS ids you will work with are:
 ///////////////////////////////////////////////////////////////////////
 
 // TODO 2: Implement bubbleSort
-async function bubbleSort (array) {
-   
+async function bubbleSort(array) {
+
     var sorted = false
 
     while (sorted === false) {
-        sorted = true 
-   
+        sorted = true
+
         for (i = 0; i <= array.length - 2; i++) {
-            
-            if (array[i].value > array[i + 1].value){
-                
-                swap(i, i + 1, array); 
-                sorted = false 
+
+            if (array[i].value > array[i + 1].value) {
+
+                swap(i, i + 1, array);
+                sorted = false
 
                 updateCounter(bubbleCounter);
                 await sleep();
-            } 
+            }
         }
 
-    }   
-        
+    }
+
 }
-    
-	
+
+
 
 
 // // TODO 3: Implement quickSort
 
-async function quickSort (array,left, right){
-    return 
+async function quickSort(array, left, right) {
+    if (array.lemgth > 1 ) {
+        
+    }
+    else {
+        return;
+    }
+    // var index = await partition(array, left, right)
 }
 
 
@@ -51,9 +57,34 @@ async function quickSort (array,left, right){
 
 // TODOs 4 & 5: Implement partition
 
-function partition(array, left, right){
+async function partition(array, left, right) {
+
+    var pivot = array[Math.floor((right + left) / 2)].value;
+    while (left < right) {
+
+
+        while (array[left].value < pivot) {
+            left = left + 1;
+        }
+        while (array[right].value > pivot) {
+            right = right - 1;
+    
+        }
+        if (left < right ){
+
+            swap(left, right, array);
+            updateCounter(quickCounter);
+            await sleep();
+        }
+    }
+
+
+
+   return left + 1;
+
 
 }
+
 
 
 
@@ -66,7 +97,7 @@ function swap(i, j, array) {
     array[j] = temp;
 
 
-    drawSwap(array, i , j)
+    drawSwap(array, i, j)
 
 }
 
