@@ -45,17 +45,31 @@ async function bubbleSort(array) {
 async function quickSort(array, left, right) {
     if (array.lemgth > 1 ) {
         
+        array = partition(array, left, right);
+            
+            if (left < index - 1) {
+              
+                quickSort(array, left, index - 1);
+            }
+          
+            if(index < right){
+                quickSort(array, index, right)
+           
+            }
+           
+        }
+            else {
+            
+            return array;
+        }
     }
-    else {
-        return;
-    }
-    // var index = await partition(array, left, right)
-}
+  
+    //     var index = await quickSort(array - 1, left, index - 1);
+    //     var index = await quickSort()
 
 
 
-
-// TODOs 4 & 5: Implement partition
+    // TODOs 4 & 5: Implement partition
 
 async function partition(array, left, right) {
 
@@ -78,10 +92,7 @@ async function partition(array, left, right) {
         }
     }
 
-
-
-   return left + 1;
-
+    return left + 1;
 
 }
 
